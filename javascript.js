@@ -5,7 +5,7 @@ function getComputerChoice() {
 }
 
 function playRound (computerSelection, playerSelection) {
- 
+
     computerSelection = computerSelection.toLowerCase()
     playerSelection = playerSelection.toLowerCase()
     // display what the computer chose and what the player chose
@@ -34,15 +34,18 @@ function playRound (computerSelection, playerSelection) {
 
 
 function game() {
+    // play a game of 5 rounds
     let playerScore = 0;
     let computerScore = 0;
 
     // play 5 rounds
     for (let i = 0; i < 5; i++) {
-
+        // get the player's choice for the round
         let playerChoice = prompt("Rock, Paper, Scissors?")
+        // generate computer's choice for the round
         let computerChoice = getComputerChoice();
         
+        // play a round using computer and player's choice
         let result = (playRound(playerChoice,computerChoice)); 
         console.log(result)
 
